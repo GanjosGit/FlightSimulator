@@ -1,0 +1,24 @@
+// FlightSimulator.cs (main script)
+using UnityEngine;
+
+public class FlightSimulator : MonoBehaviour
+{
+    // Aircraft controls
+    public float speed = 100f;
+    public float turnSpeed = 50f;
+
+    // Lighting and physics
+    public Light skyboxLight;
+    public PhysicMaterial aircraftMaterial;
+
+    void Update()
+    {
+        // Keyboard controls
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
+
+        // Move aircraft
+        transform.Translate(Vector3.forward * speed * vertical * Time.deltaTime);
+        transform.Rotate(Vector3.up * turnSpeed * horizontal * Time.deltaTime);
+    }
+}
