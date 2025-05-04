@@ -1,0 +1,8 @@
+FlightSimulator/
+Assets/
+Scenes/
+FlightSimulator.unity
+Scripts/
+FlightSimulator.cs
+...
+GitHub Actions workflow file added...
